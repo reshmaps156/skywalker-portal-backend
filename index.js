@@ -1,12 +1,11 @@
 const express = require('express');
 const cors = require('cors');
-const getAccessToken = require('./accessToken');
 const router = require('./routes');
 require('./connection');
 
-const app = express(); // Creation of express server
+const app = express(); 
 app.use(cors());
-app.use(express.json()); // Middleware to parse JSON format
+app.use(express.json()); 
 app.use(router);
 
 const PORT = 4000 || process.env.PORT;

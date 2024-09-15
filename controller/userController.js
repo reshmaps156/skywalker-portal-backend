@@ -35,11 +35,11 @@ exports.postGrievanceController = async (req, res) => {
   }
 };
 
+//access token for virtual assistant
 exports.getAccessTokenController = async (req, res) => {
   try {
     const token = await getAccessToken();
-    console.log(token);
-    
+   
     if (token) {
       res.status(200).json({ token }); 
       

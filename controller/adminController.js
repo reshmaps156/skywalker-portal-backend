@@ -2,6 +2,7 @@ const admins = require("../models/adminModel")
 const userGrievances = require("../models/grievanceModel");
 const jwt = require('jsonwebtoken')
 
+//logic for login
 exports.loginController = async (req, res) => {
     const { email, password } = req.body
     try {
@@ -20,6 +21,7 @@ exports.loginController = async (req, res) => {
 
 }
 
+
 exports.inboxController = async (req, res) => {
     const searchKey = req.query.search
     try {
@@ -37,6 +39,8 @@ exports.inboxController = async (req, res) => {
     }
 }
 
+
+//delete the grievances
 exports.deleteMessageController = async (req, res) => {
     const { id } = req.params
     try {
