@@ -26,7 +26,7 @@ exports.inboxController = async (req, res) => {
     const searchKey = req.query.search
     try {
         const query = {
-            subject: { $regex: searchKey, $options: 'i' }
+            priority: { $regex: searchKey, $options: 'i' }
         }
         let inbox = await userGrievances.find(query)
         if (inbox) {
