@@ -28,14 +28,15 @@ const sendMail = async (username, subject, grievanceDetails) => {
 
     const mailOptions = {
       from: 'reshmaps156@gmail.com',
-      to: 'reshmaps156@gmail.com', 
+      to: 'skywalkerportal@gmail.com', 
       subject: `New Grievance Submitted`,
       text: `Dear Admin,
 
 A new grievance has been submitted by ${username}.
 
 
- Sub : ${subject}
+ Subject : ${subject}
+ 
  ${grievanceDetails}
 
 Please log in to the admin portal to view more details.
